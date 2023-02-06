@@ -28,7 +28,7 @@ $(document).ready(function(){
         $(".modal-header").css("background-color", "#1cc88a");
         $(".modal-header").css("color", "white");
         $(".modal-title").text("Nueva Solicitud");            
-        $("#modalCRUD").modal("show");        
+        $("#modalSolicitudes").modal("show");        
         id=null;
         opcion = 1; //alta
     });    

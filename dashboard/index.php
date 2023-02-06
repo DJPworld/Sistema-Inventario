@@ -94,7 +94,7 @@ $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
 
                 <div class="col-sm-2">
                     <div class="d-grid mb-2">
-                        <button class="btn btn-success" type="submit"><i class="fas fa-file-excel"></i> Exportar</button>
+                    <a href="pdf/generar.php" class="btn btn-danger"><i class="fas fa-file-pdf"></i>Exportar</a>
                     </div>
                 </div>
             </div>

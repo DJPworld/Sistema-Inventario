@@ -3,33 +3,14 @@ $(document).ready(function(){
        "columnDefs":[{
         "targets": -1,
         "data":null,
-        "defaultContent": "<div class='text-center'><div class='btn-group'><button class='btn btn-primary btnEditar'>Editar</button><button class='btn btn-danger btnBorrar'>Borrar</button></div></div>"  
+        "defaultContent": "<div class='text-center'><button class='btn btn-danger btnBorrar'>Borrar</button></div></div>"  
        }],
     });
-      
+    
+    
     
     var fila; //capturar la fila para editar o borrar el registro
     
-    //botón EDITAR    
-    $(document).on("click", ".btnEditar", function(){
-        fila = $(this).closest("tr");
-        id = parseInt(fila.find('td:eq(0)').text());
-        nombre = fila.find('td:eq(1)').text();
-        pais = fila.find('td:eq(2)').text();
-        edad = parseInt(fila.find('td:eq(3)').text());
-        
-        $("#nombre").val(nombre);
-        $("#pais").val(pais);
-        $("#edad").val(edad);
-        opcion = 2; //editar
-        
-        $(".modal-header").css("background-color", "#4e73df");
-        $(".modal-header").css("color", "white");
-        $(".modal-title").text("Editar Persona");            
-        $("#modalCRUD").modal("show");  
-        
-    });
-
     //botón BORRAR
     $(document).on("click", ".btnBorrar", function(){    
         fila = $(this);
